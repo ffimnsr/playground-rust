@@ -1,0 +1,16 @@
+[package]
+name = "plug_gimp"
+version = "0.1.0"
+authors = ["ffimnsr <ffimnsr@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["dylib", "rlib"]
+
+[dependencies]
+log = "0.4.8"
+pretty_env_logger = "0.4.0"
+kuchiki = "0.8.0"
+reqwest = { version = "0.10", features = ["json"] }
+tokio = { version = "0.2", features = ["full"] }
+scarper = { path = "../../" }

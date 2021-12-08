@@ -1,0 +1,29 @@
+[package]
+name = "scarper"
+version = "0.2.0"
+authors = ["ffimnsr <ffimnsr@gmail.com>"]
+edition = "2018"
+readme = "README.md"
+description = "A pluggable package / executable version checker for the command line."
+categories = ["command-line-utilities", "development-tools", "embedded"]
+homepage = "https://github.com/ffimnsr/scarper"
+repository = "https://github.com/ffimnsr/scarper"
+license = "MIT OR Apache-2.0"
+keywords = ["cli", "version", "checker", "pluggable"]
+exclude = [".gitignore"]
+
+[lib]
+name = "scarper"
+path = "src/lib.rs"
+
+[dependencies]
+log = "0.4.8"
+pretty_env_logger = "0.4.0"
+serde = { version = "1.0.104", features = ["derive"] }
+serde_json = "1.0.47"
+toml = "0.5.6"
+reqwest = { version = "0.10", features = ["json"] }
+tokio = { version = "0.2", features = ["full"] }
+prettytable-rs = "0.8.0"
+libloading = "0.5.2"
+walkdir = "2.3.1"
